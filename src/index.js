@@ -61,10 +61,84 @@ footerLink.classList.add('bold')
 
 //contact section
 
-const contact = document.querySelector('section.contact');
+const contact = document.querySelector('.contact');
 contact.querySelector('h4').textContent = siteContent.contact['contact-h4'];
 
 // you can use children[0] for h4
 contact.children[1].textContent = siteContent.contact['address'];
 contact.children[2].textContent = siteContent.contact['phone'];
 contact.children[3].textContent = siteContent.contact['email'];
+
+//Top 
+
+const topContent = document.querySelector('.top-content')
+
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+//bottom content
+
+const bottomContent = document.querySelector('.bottom-content')
+
+
+
+//It is easier to separate header and p tags
+const headerBottom = bottomContent.querySelectorAll('h4')
+
+headerBottom[0].textContent = siteContent['main-content']['services-h4']
+headerBottom[1].textContent = siteContent['main-content']['product-h4']
+headerBottom[2].textContent = siteContent['main-content']['vision-h4']
+
+//p tags
+const pBottom = bottomContent.querySelectorAll('p')
+
+pBottom[0].textContent = siteContent['main-content']['services-content']
+pBottom[1].textContent = siteContent['main-content']['product-content']
+pBottom[2].textContent = siteContent['main-content']['vision-content']
+
+
+
+//CTA
+
+
+const h1 = document.querySelector('h1')
+h1.textContent = siteContent['cta']['h1']
+
+const button = document.querySelector('button')
+button.textContent = siteContent['cta']['button']
+
+
+//NAV
+
+const navLinks = document.querySelectorAll('header nav a')
+
+
+
+navLinks[0].textContent = siteContent.nav['nav-item-1']
+navLinks[1].textContent = siteContent.nav['nav-item-2']
+navLinks[2].textContent = siteContent.nav['nav-item-3']
+navLinks[3].textContent = siteContent.nav['nav-item-4']
+navLinks[4].textContent = siteContent.nav['nav-item-5']
+navLinks[5].textContent = siteContent.nav['nav-item-6']
+
+
+
+navLinks[0].classList.add('italic')
+navLinks[1].classList.add('italic')
+navLinks[2].classList.add('italic')
+navLinks[3].classList.add('italic')
+navLinks[4].classList.add('italic')
+navLinks[5].classList.add('italic')
+
+
+
+
+
+
+
+
+
+
+
