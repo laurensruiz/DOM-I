@@ -40,3 +40,31 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//img
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img']
+
+const ctaImg = document.querySelector('#cta-img');
+
+ctaImg.src = siteContent.images['cta-img'];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent.images['accent-img'];
+
+
+//footer link
+
+const footerLink= document.querySelector('footer a');
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add('bold')
+
+//contact section
+
+const contact = document.querySelector('section.contact');
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4'];
+
+// you can use children[0] for h4
+contact.children[1].textContent = siteContent.contact['address'];
+contact.children[2].textContent = siteContent.contact['phone'];
+contact.children[3].textContent = siteContent.contact['email'];
