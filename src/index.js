@@ -112,10 +112,18 @@ button.textContent = siteContent['cta']['button']
 
 //NAV
 
-const navLinks = document.querySelectorAll('header nav a')
+//possible
+ const navText = Object.values(siteContent.nav);
+ const navLinks = document.querySelectorAll('header nav a')
+
+  navLinks.forEach((link, idx) => {
+    link.textContent = navText[idx];
+    link.classList.add('italic');
+  })
 
 
 
+/*
 navLinks[0].textContent = siteContent.nav['nav-item-1']
 navLinks[1].textContent = siteContent.nav['nav-item-2']
 navLinks[2].textContent = siteContent.nav['nav-item-3']
@@ -131,14 +139,4 @@ navLinks[2].classList.add('italic')
 navLinks[3].classList.add('italic')
 navLinks[4].classList.add('italic')
 navLinks[5].classList.add('italic')
-
-
-
-
-
-
-
-
-
-
-
+*/
